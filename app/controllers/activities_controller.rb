@@ -3,6 +3,7 @@ class ActivitiesController < ApplicationController
   # GET /activities.json
   def index
     @activities = Activity.all
+    @preformeds = Preformed.all
 
     respond_to do |format|
       format.html # index.html.erb

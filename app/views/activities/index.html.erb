@@ -4,7 +4,7 @@
   <tr>
     <th>Activity</th>
     <th>Value</th>
-    <th></th>
+    <th>Date/Number of times preformed</th>
     <th></th>
     <th></th>
   </tr>
@@ -13,14 +13,7 @@
   <tr>
     <td><%= activity.activity %></td>
     <td><%= activity.value %></td>
-    <% activity.preformed.each do |display| %>
-      <p>
-        <b>Date:</b>
-        <%= display.selected_date %>
-        <b>Preformed:</b>
-        <%= display.preformed %>
-      </p>
-    <% end %>
+    <td><%= render activity.preformeds %></td>
     <td><%= link_to 'Show', activity %></td>
     <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
     <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>

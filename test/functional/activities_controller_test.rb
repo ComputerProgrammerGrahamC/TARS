@@ -36,7 +36,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "should update activity" do
     put :update, id: @activity, activity: {  activity: @activity. activity, value: @activity.value }
-    assert_redirected_to activity_path(assigns(:activity))
+    assert_redirected_to activities_path
   end
 
   test "should destroy activity" do

@@ -5,4 +5,5 @@ class Activity < ActiveRecord::Base
                        :uniqueness => true
   validates :value, :presence => true,
                     :numericality => { :only_integer => true }
+  has_many :preformeds, :dependent => :destroy
 end

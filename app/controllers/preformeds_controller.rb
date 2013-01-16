@@ -7,7 +7,8 @@ class PreformedsController < ApplicationController
 
   def destroy
     @activity = Activity.find(params[:activity_id])
-    @preformed = @activity.preformed.destroy
+    @preformed = @activity.preformed.find(params[:id])
+    @preformed.destroy
     redirect_to activity_path(@activity)
   end
 end

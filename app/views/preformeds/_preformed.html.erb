@@ -1,0 +1,9 @@
+<p>
+  <b>Date:</b>
+  <%= preformed.selected_date %>
+  <b>Preformed:</b>
+  <%= preformed.preformed %>
+  <%= link_to 'Destroy Preformed', [preformed.activity, preformed],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+</p>

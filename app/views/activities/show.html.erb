@@ -10,28 +10,9 @@
   <%= @activity.value %>
 </p>
 
-<% @activity.preformed.each do |display| %>
-  <p>
-    <b>Date:</b>
-    <%= display.selected_date %>
-    <b>Preformed:</b>
-    <%= display.preformed %>
-  </p>
-<% end %>
+<%= render @activity.preformeds %>
 
-<%= form_for([@activity, @activity.preformed.build]) do |f| %>
-  <div class="field">
-    <%= f.label :preformed %><br />
-    <%= f.text_field :preformed %>
-  </div>
-  <div class="field">
-    <%= f.label :selected_date %><br />
-    <%= f.date_select :selected_date %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<%= render "preformeds/form" %>
 
 <%= link_to 'Edit', edit_activity_path(@activity) %> |
 <%= link_to 'Back', activities_path %>

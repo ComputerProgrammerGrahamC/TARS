@@ -1,0 +1,13 @@
+<%= form_for([@activity, @activity.preformed.build]) do |f| %>
+  <div class="field">
+    <%= f.label :preformed %><br />
+    <%= f.text_field :preformed %>
+  </div>
+  <div class="field">
+    <%= f.label :selected_date %><br />
+    <%= f.date_select :selected_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
