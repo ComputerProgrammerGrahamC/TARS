@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'rspec'
 
 class ActivitiesControllerTest < ActionController::TestCase
   setup do
