@@ -1,0 +1,6 @@
+<ul>
+    <% @activities.each do |activity| %>
+  <li><%= link_to activity.title,
+    :action => 'show', :id => activity.id  %></li>
+  <% end %>
+</ul>

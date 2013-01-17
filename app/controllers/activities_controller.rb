@@ -82,4 +82,16 @@ class ActivitiesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def search
+    @project_search = Project.search(params[:start_date], params[:end_date], params[:keywords]).order(sort_column + ' ' + sort_direction).paginated_for_index(per_page, page)
+
+    @project = Project.new(params[:project])
+
+    respond_to do |format|
+      format.html # search.html.erb
+      format.json { render :json => @project }
+    end
+
+  end
 end

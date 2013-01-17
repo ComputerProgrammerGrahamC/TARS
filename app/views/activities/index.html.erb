@@ -1,10 +1,17 @@
 <h1>Listing activities</h1>
 
 
-<%= form_tag("/search", :method => "get") do %>
-  <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
+<%= form_tag search_path, method: :get do %>
+  Start Date :
+  <%#= text_field_tag :start_date, params[:start_date] %></br>
+  <div class="field">
+    <%= datepicker_input "project","start_date" %></br>
+  </div>
+  End Date :
+  <%#= text_field_tag :end_date, params[:end_date] %></br>
+  <%= datepicker_input "project","end_date" %></br>
+
+  <%= submit_tag "Search", name: nil %>
 <% end %>
 <table>
   <tr>
