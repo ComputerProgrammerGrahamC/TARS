@@ -2,14 +2,14 @@
 
 
 <%= form_tag search_path, method: :get do %>
-  Start Date :
-  <%#= text_field_tag :start_date, params[:start_date] %></br>
+  <%= text_field_tag("start_date") %></br>
   <div class="field">
-    <%= datepicker_input "project","start_date" %></br>
+    <%= datepicker_input "activity","start_date" %></br>
   </div>
-  End Date :
-  <%#= text_field_tag :end_date, params[:end_date] %></br>
-  <%= datepicker_input "project","end_date" %></br>
+  <%= text_field_tag("end_date") %></br>
+  <div class="field">
+    <%= datepicker_input "activity","end_date" %></br>
+  </div>
 
   <%= submit_tag "Search", name: nil %>
 <% end %>

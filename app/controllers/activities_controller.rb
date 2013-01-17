@@ -84,9 +84,9 @@ class ActivitiesController < ApplicationController
   end
 
   def search
-    @project_search = Project.search(params[:start_date], params[:end_date], params[:keywords]).order(sort_column + ' ' + sort_direction).paginated_for_index(per_page, page)
+    @activity_search = Activity.search(params[:start_date], params[:end_date], params[:keywords]).order(sort_column + ' ' + sort_direction).paginated_for_index(per_page, page)
 
-    @project = Project.new(params[:project])
+    @activity = Activity.new(params[:project])
 
     respond_to do |format|
       format.html # search.html.erb
