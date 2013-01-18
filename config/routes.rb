@@ -1,6 +1,9 @@
 TARS::Application.routes.draw do
   resources :activities do
     resources :preformeds
+    collection do
+      get 'search'
+    end
   end
 
 

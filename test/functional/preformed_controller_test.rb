@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'rspec'
 
 class PreformedControllerTest < ActionController::TestCase
   test "should create preformed" do
